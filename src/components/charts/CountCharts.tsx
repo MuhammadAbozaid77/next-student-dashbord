@@ -39,7 +39,7 @@ export default function CountCharts() {
           cy="50%"
           innerRadius="40%"
           outerRadius="110%"
-          barSize={50}
+          barSize={60}
           data={data}
         >
           <RadialBar
@@ -49,7 +49,7 @@ export default function CountCharts() {
           />
         </RadialBarChart>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
-          <PiStudentFill className="text-slate-500" size={50} />
+          <PiStudentFill className="text-primaryTextColor" size={50} />
           {/* <IoManSharp color="#bae6fd" size={35} /> */}
         </div>
       </ResponsiveContainer>

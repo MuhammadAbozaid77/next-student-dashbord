@@ -13,8 +13,17 @@ export default {
         foreground: "var(--foreground)",
         boysColor: "#bae6fd",
         girlsColor: "#ddd6fe",
+        primaryTextColor: "#475569",
+        primaryBgColor: "#64748b",
+        amberColor300: "#fcd34d",
+        mainBgColor: "#0891b2",
+        mainTextColor: "#06b6d4",
       },
     },
   },
   plugins: [],
 } satisfies Config;
+
+// Layouts --- Cyan    (600-500)
+// card title ---- slate   (600-500)
+// Sky - Purple

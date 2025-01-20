@@ -21,3 +21,19 @@ body {
   background: var(--background);
   font-family: "Cairo", serif;
 }
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: "Cairo", serif !important;
+  background-color: white !important;
+  color: #0a0a0a;
+}
+.react-calendar__tile--active {
+  background-color: #6b7280 !important;
+}
+.react-calendar__navigation__label__labelText {
+  font-weight: bolder;
+  color: #0a0a0a;
+  text-transform: capitalize;
+}
