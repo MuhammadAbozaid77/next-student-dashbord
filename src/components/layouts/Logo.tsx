@@ -3,8 +3,11 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <>
-      <div className=" p-5">
-        <Link href={"/"}> Logo </Link>
+      <div className="flex justify-center items-center h-[80px] border-b shadow">
+        <Link href={"/"} className="font-bold text-[30px] text-mainBgColor">
+          {" "}
+          Logo{" "}
+        </Link>
       </div>
     </>
   );

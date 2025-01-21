@@ -10,7 +10,7 @@ export default function DashbordLayout({
   return (
     <>
       <div className="h-screen flex">
-        <div className="w-[15%] md:w-[10%] lg:w-[15%] bg-white p-5 border-r overflow-y-auto">
+        <div className="w-[15%] md:w-[10%] lg:w-[15%] bg-white  border-r overflow-y-auto">
           <Logo />
           <Menu />
         </div>

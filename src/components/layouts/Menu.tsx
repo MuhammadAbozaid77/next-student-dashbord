@@ -1,25 +1,32 @@
-import { menuItems } from "@/lib/data/menuData";
+import { role } from "@/lib/data/data";
+import { MenuItems } from "@/lib/data/menuData";
 import Link from "next/link";
 
 export default function Menu() {
   return (
     <>
-      <div>
-        {menuItems?.map((el) => (
-          <div key={el?.title}>
-            <span className="font-semibold"> {el?.title} </span>
+      <div className="p-5 ">
+        {MenuItems?.map((el) => (
+          <div key={el?.title} className="mb-5">
+            <span className="font-bold text-primaryBgColor"> {el?.title} </span>
             <ul>
-              {el?.items?.map((item) => (
-                <li key={item?.label} className="p-2">
-                  <Link
-                    href={`/${item?.href}`}
-                    className="flex justify-start items-center gap-1"
-                  >
-                    {/* <div className="border p-1 border-gray-500 w-[30px]"> </div> */}
-                    <div className="text-[14px] font-semibold text-gray-600"> {item?.label} </div>
-                  </Link>
-                </li>
-              ))}
+              {el?.items?.map((item) => {
+                if (item?.visible.includes(role)) {
+                  return (
+                    <li key={item?.label} className="p-2">
+                      <Link
+                        href={`/${item?.href}`}
+                        className="flex justify-start items-center gap-1"
+                      >
+                        <div className=" font-semibold text-gray-600 flex items-center  gap-1">
+                          <span className="text-mainBgColor flex justify-center items-center text-[30px] mx-2">{item?.icon}</span>
+                          <span className="text-[14px] lg:block hidden">{item?.label}</span>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                }
+              })}
             </ul>
           </div>
         ))}

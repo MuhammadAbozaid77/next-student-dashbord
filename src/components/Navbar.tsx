@@ -6,7 +6,7 @@ import { RiUser3Line } from "react-icons/ri";
 export default function Navbar() {
   return (
     <>
-      <div className="flex justify-between items-center p-5 border-b bg-white">
+      <div className="flex justify-between items-center p-5 border-b bg-white h-[80px] shadow">
         {/* Search Bar */}
         <div className="md:flex hidden justify-center items-center bg-white px-2 rounded-md gap-1 border">
           <RiSearch2Line
