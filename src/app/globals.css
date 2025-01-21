@@ -37,3 +37,42 @@ body {
   color: #0a0a0a;
   text-transform: capitalize;
 }
+
+ {
+  /* ------------------------------------ React Big Calender EDIT CSS */
+}
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+.rbc-btn-group:last-child {
+  font-size: 16px !important;
+}
+
+.rbc-toolbar button {
+  padding: 2px 5px !important;
+  width: 100px !important;
+  box-shadow: none !important;
+  font-weight: bold !important;
+}
+/* .rbc-toolbar button:hover {
+  background-color: #ecfeff !important;
+} */
+.rbc-active {
+  background-color: #0891b2 !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+.rbc-toolbar-label {
+  text-align: left !important;
+  padding: 0px 0px !important;
+  font-weight: bold !important;
+}
+
+.rbc-today {
+  background-color: #0891b2 !important;
+  color: white !important;
+}
+
+.rbc-now {
+  background-color: #cbd5e1 !important;
+}
