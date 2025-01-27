@@ -3,9 +3,9 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 export default function Pagination() {
   return (
     <div className="flex justify-center items-center  gap-5 p-2">
-      <button className="flex cursor-pointer justify-center items-center gap-1 disabled:opacity-50 p-1 rounded min-w-[100px] capitalize font-semibold bg-mainBgColor text-white text-center ">
+      <button className="flex cursor-pointer justify-center items-center gap-1 disabled:opacity-50 p-1 rounded md:min-w-[100px] w-auto capitalize font-semibold bg-mainBgColor text-white text-center ">
         <FaChevronLeft />
-        <span>Previous</span>
+        <span className="md:block hidden">Previous</span>
       </button>
       <div className="flex gap-1">
         <button className="px-2 py-1 rounded bg-gray-200 text-primaryTextColor font-bold">
@@ -24,8 +24,8 @@ export default function Pagination() {
           5
         </button>
       </div>
-      <button className="flex cursor-pointer justify-center items-center gap-1 disabled:opacity-50 p-1 rounded min-w-[100px] capitalize font-semibold bg-mainBgColor text-white text-center ">
-        <span>Next</span>
+      <button className="flex cursor-pointer justify-center items-center gap-1 disabled:opacity-50 p-1 rounded md:min-w-[100px] w-auto capitalize font-semibold bg-mainBgColor text-white text-center ">
+        <span className="md:block hidden">Next</span>
         <FaChevronRight />
       </button>
     </div>

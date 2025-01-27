@@ -4,9 +4,9 @@ export default function TableSearch() {
   return (
     <>
       <form>
-        <div className="flex  rounded w-[500px] items-center border-cyan-600 border p-1">
+        <div className="flex  rounded md:w-[500px] items-center border-cyan-600 border p-1">
           <div className="p-1 text-mainBgColor border-r border-mainBgColor">
-            <RiSearch2Line size={25} />
+            <RiSearch2Line className="md:text-[25px] text-[20px]" />
           </div>
           <input
             type="text"
