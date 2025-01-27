@@ -5,21 +5,17 @@ import Pagination from "@/components/ui/Pagination";
 import Table from "@/components/ui/Table";
 import TableSearch from "@/components/ui/TableSearch";
 import Wrapper from "@/components/ui/Wrapper";
-import { studentsData } from "@/lib/data/data";
-import Image from "next/image";
+import { parentsData } from "@/lib/data/data";
 import { BsTrash } from "react-icons/bs";
 import { CiViewTimeline } from "react-icons/ci";
 
 interface rowType {
   id: number;
-  studentId: string;
   name: string;
-  email?: string;
-  photo: string;
-  phone?: string;
   grade?: number;
-  class: string;
-  address: string;
+  students: string[];
+  phone?: string;
+  email?: string;
 }
 const columns = [
   {
@@ -27,13 +23,8 @@ const columns = [
     accessor: "info",
   },
   {
-    header: "Student Id",
-    accessor: "studentId",
-    classesName: "hidden md:table-cell",
-  },
-  {
-    header: "Grade",
-    accessor: "grade",
+    header: "Student Names",
+    accessor: "students",
     classesName: "hidden md:table-cell",
   },
   {
@@ -52,38 +43,26 @@ const columns = [
   },
 ];
 
-export default function StudentsPage() {
+export default function ParentsPage() {
   const renderRow = (row: rowType) => {
     return (
       <tr key={row.id} className="min:h-[50px] odd:bg-slate-200 p-2">
         <td className="text-gray-500 p-1">
           <div className="flex justify-start gap-2">
-            <Image
-              src={row.photo}
-              width={40}
-              height={40}
-              alt=""
-              className="rounded-full w-10 h-10 object-cover md:block hidden"
-            />
             <div className="text-gray-500 flex flex-col justify-center">
               <span className="text-slate-700 font-semibold">{row.name}</span>
-              <span className="text-[12px]">{row.class}</span>
+              <span className="text-[12px]">{row?.email}</span>
             </div>
           </div>
         </td>
         <td className="text-gray-500 text-center hidden md:table-cell ">
-          {row.studentId}
+          {row.students?.join(",")}
         </td>
         <td className="text-gray-500 text-center hidden md:table-cell ">
           {row.grade}
         </td>
         <td className="text-gray-500 text-center hidden lg:table-cell ">
-          {" "}
-          {row.phone}{" "}
-        </td>
-        <td className="text-gray-500 text-center hidden lg:table-cell ">
-          {" "}
-          {row.address}{" "}
+          {row.phone}
         </td>
         <td>
           <div className="flex justify-center items-center gap-2">
@@ -101,13 +80,13 @@ export default function StudentsPage() {
 
   return (
     <Wrapper>
-      <LargeCardTitle title={"Students"} />
+      <LargeCardTitle title={"Parents"} />
       <Container>
         <div className="flex justify-between md:items-center  md:flex-row flex-col gap-2">
           <TableSearch />
           <FilterButtons />
         </div>
-        <Table columns={columns} renderRow={renderRow} data={studentsData} />
+        <Table columns={columns} renderRow={renderRow} data={parentsData} />
         <Pagination />
       </Container>
     </Wrapper>
