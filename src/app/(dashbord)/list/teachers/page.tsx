@@ -6,7 +6,7 @@ import Table from "@/components/ui/Table";
 import TableSearch from "@/components/ui/TableSearch";
 import Wrapper from "@/components/ui/Wrapper";
 import { teachersData } from "@/lib/data/data";
-import { CiViewTimeline, CiTrash } from "react-icons/ci";
+import { CiViewTimeline } from "react-icons/ci";
 import { BsTrash } from "react-icons/bs";
 import Image from "next/image";
 
